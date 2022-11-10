@@ -1,0 +1,166 @@
+/*----------- Footer -----------*/
+
+.footer-area {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #111;
+  color: #fff;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  .contact-info {
+    padding: 80px 0;
+    border-bottom: 2px solid rgba(85, 85, 85, 0.2);
+    .single-info {
+      text-align: center;
+    }
+    .info-icon {
+      font-size: 46px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .info-content {
+      margin-bottom: 0;
+      font-size: 15px;
+      color: #dcdcdc;
+      a {
+        color: #dcdcdc;
+        &:hover, &:focus {
+          color: lighten(#dcdcdc, 5%);
+        }
+      }
+    }
+  }
+  .mini-footer {
+    padding: 44px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .social-medias {
+      margin-bottom: 0;
+      a {
+        background-color: #222;
+        color: #fff;
+        height: 26px;
+        width: 26px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 20%;
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0 6px;
+        transition: $transition-x2;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.twitter {
+          background-color: #1DA1F2;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#1DA1F2, 8%);
+          }
+        }
+
+        &.instagram {
+          background-color: #C32361;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#C32361, 8%);
+          }
+        }
+
+        &.linkedin {
+          background-color: #0077B5;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#0077B5, 8%);
+          }
+        }
+
+        &.youtube {
+          background-color: #c33a38;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#c33a38, 8%);
+          }
+        }
+
+        &.github {
+          background-color: #6e5494;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#6e5494, 8%);
+          }
+        }
+
+        &.facebook {
+          background-color: #3B5998;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#3B5998, 8%);
+          }
+        }
+
+        &.dribbble {
+          background-color: #C32361;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#C32361, 8%);
+          }
+        }
+      }
+    }
+
+    .copyright-notice {
+      margin-bottom: 0;
+      color: #c7c7c7;
+      text-align: right;
+    }
+
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .footer-area {
+    .mini-footer {
+      padding: 25px 0;
+      text-align: center;
+      display: block;
+
+      .social-medias {
+        margin-bottom: 14px;
+      }
+
+      .copyright-notice {
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .footer-area {
+    .contact-info {
+      [class*='col-']:not(:last-child) {
+        .single-info {
+          margin-bottom: 55px;
+        }
+      }
+    }
+    .mini-footer {
+      .copyright-notice {
+        font-size: 13px;
+      }
+    }
+  }
+}

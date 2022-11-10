@@ -1,0 +1,1 @@
+Read about licensing details here: http://themeforest.net/licenses

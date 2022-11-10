@@ -1,0 +1,31 @@
+@import '../init';
+
+/*----------- Table of Contents -----------*/
+
+/**
+ * Globals
+ * Preloader
+ * Sidebar
+ * Home
+ * About
+ * Services
+ * Hire
+ * Portfolio
+ * Testimonials
+ * Blog
+ * Contact
+ * Footer
+ */
+
+@import 'partials/globals';
+@import 'partials/preloader';
+@import 'partials/sidebar';
+@import 'partials/home';
+@import 'partials/about';
+@import 'partials/services';
+@import 'partials/hire';
+@import 'partials/portfolio';
+@import 'partials/testimonials';
+@import 'partials/blog';
+@import 'partials/contact';
+@import 'partials/footer';

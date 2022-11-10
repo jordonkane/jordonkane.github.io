@@ -1,0 +1,238 @@
+/*----------- Portfolio -----------*/
+
+.portfolio-area {
+  .filter-control {
+    margin-bottom: 14px;
+
+    &>li {
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: all .10s ease-in-out;
+      position: relative;
+      letter-spacing: 0.3px;
+      color: #444;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      &:hover,
+      &.tab-active {
+
+        &:before {
+          content: "";
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .portfolio-grid {
+
+    .portfolio-wrapper {
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        background-color: rgba(#000, 0.90);
+        content: '';
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      &>.img-fluid {
+        width: 100%;
+      }
+
+      .item-content {
+        text-align: center;
+        padding: 3px 18px;
+        width: 100%;
+        position: absolute;
+        transition: $transition;
+        visibility: hidden;
+        z-index: 2;
+        opacity: 0;
+        left: 0;
+
+        .content-title {
+          font-size: 15px;
+          font-weight: 400;
+          margin-bottom: 10px;
+          line-height: 1.8;
+          color: #fff;
+        }
+
+        .content-more {
+          font-weight: 600;
+          display: inline-block;
+        }
+      }
+
+      &:hover {
+        &:before {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .item-content {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .lightbox-wrapper {
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    &>.container>.row {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 25px;
+      right: 4vw;
+      z-index: 99;
+
+      .close-btn {
+        @include open-btn();
+        @include close-btn();
+
+        .btn-line,
+        &:before,
+        &:after {
+          background-color: rgba(#000, .6);
+          height: 2px;
+          width: 80%;
+        }
+      }
+    }
+
+    .lightbox-gallery {
+      .owl-dots {
+        position: absolute;
+        margin-top: 0;
+        bottom: -38px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .lightbox-content {
+      margin-left: 12px;
+
+      .content-title {
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: 42px;
+      }
+
+      .content-description {
+        p {
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .content-info {
+        margin-bottom: 40px;
+
+        .single-info {
+          width: 49.6%;
+          margin-bottom: 15px;
+
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+
+          &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+          }
+
+          &>span {
+            font-weight: 600;
+            margin-right: 10px;
+            color: #444;
+          }
+
+          &>p {
+            display: inline-block;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .content-btn {}
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .portfolio-area {
+    .lightbox-wrapper {
+      .lightbox-gallery {
+        margin-bottom: 55px;
+      }
+
+      .lightbox-content {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .portfolio-area {
+    .portfolio-grid {
+      .portfolio-wrapper {
+        .item-content {
+          .content-title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .lightbox-wrapper {
+
+      .lightbox-content {
+        .content-title {
+          font-size: 36px;
+        }
+
+        .content-info {
+
+          .single-info {
+            width: auto;
+            display: block;
+            margin-bottom: 10px;
+
+            &:nth-last-child(-n+2) {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

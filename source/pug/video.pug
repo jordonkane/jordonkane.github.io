@@ -1,0 +1,24 @@
+extends init/layout
+block css-injects
+  +css-injects()
+block body
+  <body>
+    block content
+      include partials/preloader
+      .main-wrapper
+        include partials/sidebar
+        .sections-wrapper
+          // Sections
+          include partials/home
+          +home('video')
+          include partials/about
+          include partials/services
+          include partials/hire
+          include partials/portfolio
+          include partials/testimonials
+          include partials/blog
+          include partials/contact
+          include partials/footer
+block scripts
+  include init/footer-content
+  </body>

@@ -1,0 +1,243 @@
+/*----------- Globals -----------*/
+
+/* Disable outline */
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Body */
+
+body {
+  font-family: $font-1;
+  font-size: 14px;
+  line-height: 1.95;
+  font-weight: 400;
+  position: relative;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Typography */
+
+
+i.icon {
+  line-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #222;
+}
+
+b {
+  font-weight: bold;
+}
+
+/* Other elements */
+
+a {
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: 0;
+  border-top: 3px solid #e6e6e6;
+}
+
+.anchor-basic {
+  @include anchor-basic(#222, darken(#222, 25%));
+}
+
+/* Buttons */
+
+.button-main {
+  @include button();
+  color: #222;
+  background-color: #fff;
+  border: 1px solid #c5c5c5;
+  &:focus {
+    box-shadow: none;
+    background-color: darken(#fff, 25%);
+    border: 1px solid #c5c5c5;
+  }
+}
+
+.button-main.button-scheme {
+  color: #fff;
+}
+
+/* Section, title & description styles */
+
+.single-section {
+  padding: 85px 40px;
+  background-color: #fff;
+  &.alt-bg {
+    background-color: #f7f7f7;
+  }
+  .section-heading {
+    text-align: left;
+    margin-bottom: 48px;
+
+    &>.section-title {
+      font-weight: 800;
+      font-size: 40px;
+      margin-bottom: 12px;
+      letter-spacing: -0.25px;
+      line-height: 100%;
+      position: relative;
+      z-index: 9;
+      display: inline-block;
+    }
+
+    &>.section-description {
+      font-size: 15px;
+    }
+
+    &.heading-center {
+      text-align: center;
+    }
+  }
+
+  &.element-cover-bg {
+    .section-heading {
+
+      &>.section-title,
+      &>.section-description {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .single-section {
+    .section-heading {
+      &>.section-description {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .single-section {
+    padding: 65px 15px;
+
+    .section-heading {
+      &>.section-title {
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+
+/* Overlay background */
+
+.element-cover-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+/* General styles */
+
+.f-basis-100 {
+  flex-basis: 100%;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  outline: 0;
+}
+
+/* Sidebar & Main Wrapper styles */
+
+$sidebarWidth: 235px;
+
+.main-wrapper {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    width: #{$sidebarWidth};
+  }
+
+  .sections-wrapper {
+    position: relative;
+    padding-left: #{$sidebarWidth};
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .main-wrapper {
+    .sidebar {
+      left: -#{$sidebarWidth};
+    }
+
+    .sections-wrapper {
+      padding-left: 0;
+    }
+  }
+}

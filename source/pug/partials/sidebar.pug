@@ -1,0 +1,30 @@
++nl()
+// Sidebar
+header
+  nav.navbar.d-md-block.d-lg-none.fixed-top.mobile-navbar
+    button.navbar-toggler.mr-auto(type='button', data-toggle='collapse', data-target='#mobileNavbarSupportedContent', aria-controls='mobileNavbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.nav-btn Menu
+    #mobileNavbarSupportedContent.collapse.navbar-collapse.order-1
+      ul.navbar-nav.mr-auto
+  nav.sidebar(data-simplebar)
+    .sidebar-header
+      a(href="#home", data-scroll)
+        img.img-fluid.sidebar-avatar(src=`img/profile-avatar.jpg`, alt='Profile avatar')
+      span.sidebar-name Alex Smith
+      p.sidebar-status Available for work
+    .sidebar-menu
+      ul.list-unstyled.list-menu
+        li
+          a.nav-link(href='#home-area', data-scroll) Home
+        li
+          a.nav-link(href='#about-area', data-scroll) About
+        li
+          a.nav-link(href='#services-area', data-scroll) Services
+        li
+          a.nav-link(href='#portfolio-area', data-scroll) Portfolio
+        li
+          a.nav-link(href='#testimonials-area', data-scroll) Clients
+        li
+          a.nav-link(href='#blog-area', data-scroll) Blog
+        li
+          a.nav-link(href='#contact-area', data-scroll) Contact

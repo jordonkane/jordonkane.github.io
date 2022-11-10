@@ -1,0 +1,47 @@
+/*----------- Testimonials -----------*/
+
+.testimonials-area {
+  .single-review {
+    padding: 40px 30px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid rgba(214,214,214,.8);
+    .review-icon {
+      font-size: 50px;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+    .review-content {
+      margin-bottom: 24px;
+    }
+    .client-avatar {
+      border-radius: 50%;
+      width: 56px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .client-name {
+      font-size: 14px;
+      display: block;
+      font-weight: 600;
+      color: #3c3c3c;
+    }
+  }
+  .owl-carousel .owl-dots {
+    margin-top: 24px!important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .testimonials-area {
+    .single-review {
+      .review-icon {
+        font-size: 58px;
+        margin-bottom: 22px;
+      }
+      .review-content {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}

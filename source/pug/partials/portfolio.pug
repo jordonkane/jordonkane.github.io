@@ -1,0 +1,333 @@
++nl()
+// Portfolio
+section#portfolio-area.single-section.portfolio-area
+  .container
+    .row
+      .col-12
+        .section-heading
+          h2.section-title Portfolio
+          p.section-description Showcasing some of my best work
+    .row
+      +nl()
+      // Filter nav
+      .col-12
+        ul.list-inline.filter-control(role='group', aria-label='Filter Control')
+          li.list-inline-item.tab-active(data-filter='*') All
+          li.list-inline-item(data-filter='.brand') Brand
+          li.list-inline-item(data-filter='.design') Design
+          li.list-inline-item(data-filter='.photos') Photos
+    +nl()
+    // Thumbnail list
+    .portfolio-grid.row
+      +nl()
+      // Single item
+      .single-item.col-6.col-lg-4.design
+        a.portfolio-item(href='#item-1')
+          .portfolio-wrapper
+            img.img-fluid(alt='Item', src='img/item-1.jpg')
+            .item-content
+              h6.content-title Label Tag Mockup
+              span.content-more More Info
+      +nl()
+      // Single item
+      .single-item.col-6.col-lg-4.photos
+        a.portfolio-item(href='#item-2')
+          .portfolio-wrapper
+            img.img-fluid(alt='Item', src='img/item-2.jpg')
+            .item-content
+              h6.content-title 3D Bag Mockup
+              span.content-more More Info
+      +nl()
+      // Single item
+      .single-item.col-6.col-lg-4.design
+        a.portfolio-item(href='#item-3')
+          .portfolio-wrapper
+            img.img-fluid(alt='Item', src='img/item-3.jpg')
+            .item-content
+              h6.content-title Modern Bag Design
+              span.content-more More Info
+      +nl()
+      // Single item
+      .single-item.col-6.col-lg-4.brand
+        a.portfolio-item(href='#item-4')
+          .portfolio-wrapper.mb-lg-0
+            img.img-fluid(alt='Item', src='img/item-4.jpg')
+            .item-content
+              h6.content-title Coffee Cup Design
+              span.content-more More Info
+      +nl()
+      // Single item
+      .single-item.col-6.col-lg-4.brand
+        a.portfolio-item(href='#item-5')
+          .portfolio-wrapper.mb-0
+            img.img-fluid(alt='Item', src='img/item-5.jpg')
+            .item-content
+              h6.content-title T-Shirt Design
+              span.content-more More Info
+      +nl()
+      // Single item
+      .single-item.col-6.col-lg-4.photos
+        a.portfolio-item(href='#item-6')
+          .portfolio-wrapper.mb-0
+            img.img-fluid(alt='Item', src='img/item-6.jpg')
+            .item-content
+              h6.content-title Packaging Box Mockup
+              span.content-more More Info
+  +nl()
+  // Single lightbox
+  #item-1.lightbox-wrapper
+    .f-basis-100
+      .lightbox-close(data-modal-close)
+        span.close-btn
+          span.btn-line
+    .container
+      .row
+        .col-12.col-lg-5
+          .lightbox-gallery.owl-carousel.owl-theme
+            img.img-fluid.item-img(alt='Item', src='img/item-1.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-2.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-3.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-4.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-5.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-6.jpg')
+        .col-12.col-lg-7
+          .lightbox-content
+            h3.content-title Label Tag Mockup
+            .content-description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut sapiente quo explicabo, quasi incidunt aperiam laudantium, nemo cum eaque inventore ut voluptas voluptatibus nihil! Amet soluta, ea illo sint?
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dignissimos culpa deserunt aspernatur ipsa veritatis alias labore tempore laboriosam commodi! Ab neque sunt, odio voluptatibus, dignissimos nisi consequuntur atque qui explicabo eligendi, harum in? Amet aspernatur atque quam. Illo natus tempora explicabo deleniti molestias numquam debitis repudiandae, repellendus voluptatum soluta?
+            ul.list-inline.content-info
+              li.list-inline-item.single-info
+                span Client:
+                p Envato
+              li.list-inline-item.single-info
+                span Categories:
+                p
+                  a(href='#0') Branding
+                  | ,
+                  +spc
+                  a(href='#0') Web Design
+              li.list-inline-item.single-info
+                span Date:
+                p 12 May, 2019
+              li.list-inline-item.single-info
+                span Technologies:
+                p HTML5, SCSS, JS
+            a.btn.content-btn.button-main.button-scheme(href='#0', role='button') Visit Project
+  +nl()
+  // Single lightbox
+  #item-2.lightbox-wrapper
+    .f-basis-100
+      .lightbox-close(data-modal-close)
+        span.close-btn
+          span.btn-line
+    .container
+      .row
+        .col-12.col-lg-5
+          .lightbox-gallery.owl-carousel.owl-theme
+            img.img-fluid.item-img(alt='Item', src='img/item-2.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-1.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-3.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-4.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-5.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-6.jpg')
+        .col-12.col-lg-7
+          .lightbox-content
+            h3.content-title 3D Bag Mockup
+            .content-description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut sapiente quo explicabo, quasi incidunt aperiam laudantium, nemo cum eaque inventore ut voluptas voluptatibus nihil! Amet soluta, ea illo sint?
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dignissimos culpa deserunt aspernatur ipsa veritatis alias labore tempore laboriosam commodi! Ab neque sunt, odio voluptatibus, dignissimos nisi consequuntur atque qui explicabo eligendi, harum in? Amet aspernatur atque quam. Illo natus tempora explicabo deleniti molestias numquam debitis repudiandae, repellendus voluptatum soluta?
+            ul.list-inline.content-info
+              li.list-inline-item.single-info
+                span Client:
+                p Envato
+              li.list-inline-item.single-info
+                span Categories:
+                p
+                  a(href='#0') Branding
+                  | ,
+                  +spc
+                  a(href='#0') Web Design
+              li.list-inline-item.single-info
+                span Date:
+                p 12 May, 2019
+              li.list-inline-item.single-info
+                span Technologies:
+                p HTML5, SCSS, JS
+            a.btn.content-btn.button-main.button-scheme(href='#0', role='button') Visit Project
+  +nl()
+  // Single lightbox
+  #item-3.lightbox-wrapper
+    .f-basis-100
+      .lightbox-close(data-modal-close)
+        span.close-btn
+          span.btn-line
+    .container
+      .row
+        .col-12.col-lg-5
+          .lightbox-gallery.owl-carousel.owl-theme
+            img.img-fluid.item-img(alt='Item', src='img/item-3.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-1.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-2.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-4.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-5.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-6.jpg')
+        .col-12.col-lg-7
+          .lightbox-content
+            h3.content-title Modern Bag Design
+            .content-description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut sapiente quo explicabo, quasi incidunt aperiam laudantium, nemo cum eaque inventore ut voluptas voluptatibus nihil! Amet soluta, ea illo sint?
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dignissimos culpa deserunt aspernatur ipsa veritatis alias labore tempore laboriosam commodi! Ab neque sunt, odio voluptatibus, dignissimos nisi consequuntur atque qui explicabo eligendi, harum in? Amet aspernatur atque quam. Illo natus tempora explicabo deleniti molestias numquam debitis repudiandae, repellendus voluptatum soluta?
+            ul.list-inline.content-info
+              li.list-inline-item.single-info
+                span Client:
+                p Envato
+              li.list-inline-item.single-info
+                span Categories:
+                p
+                  a(href='#0') Branding
+                  | ,
+                  +spc
+                  a(href='#0') Web Design
+              li.list-inline-item.single-info
+                span Date:
+                p 12 May, 2019
+              li.list-inline-item.single-info
+                span Technologies:
+                p HTML5, SCSS, JS
+            a.btn.content-btn.button-main.button-scheme(href='#0', role='button') Visit Project
+  +nl()
+  // Single lightbox
+  #item-4.lightbox-wrapper
+    .f-basis-100
+      .lightbox-close(data-modal-close)
+        span.close-btn
+          span.btn-line
+    .container
+      .row
+        .col-12.col-lg-5
+          .lightbox-gallery.owl-carousel.owl-theme
+            img.img-fluid.item-img(alt='Item', src='img/item-4.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-1.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-2.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-3.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-5.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-6.jpg')
+        .col-12.col-lg-7
+          .lightbox-content
+            h3.content-title Coffee Cup Design
+            .content-description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut sapiente quo explicabo, quasi incidunt aperiam laudantium, nemo cum eaque inventore ut voluptas voluptatibus nihil! Amet soluta, ea illo sint?
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dignissimos culpa deserunt aspernatur ipsa veritatis alias labore tempore laboriosam commodi! Ab neque sunt, odio voluptatibus, dignissimos nisi consequuntur atque qui explicabo eligendi, harum in? Amet aspernatur atque quam. Illo natus tempora explicabo deleniti molestias numquam debitis repudiandae, repellendus voluptatum soluta?
+            ul.list-inline.content-info
+              li.list-inline-item.single-info
+                span Client:
+                p Envato
+              li.list-inline-item.single-info
+                span Categories:
+                p
+                  a(href='#0') Branding
+                  | ,
+                  +spc
+                  a(href='#0') Web Design
+              li.list-inline-item.single-info
+                span Date:
+                p 12 May, 2019
+              li.list-inline-item.single-info
+                span Technologies:
+                p HTML5, SCSS, JS
+            a.btn.content-btn.button-main.button-scheme(href='#0', role='button') Visit Project
+  +nl()
+  // Single lightbox
+  #item-5.lightbox-wrapper
+    .f-basis-100
+      .lightbox-close(data-modal-close)
+        span.close-btn
+          span.btn-line
+    .container
+      .row
+        .col-12.col-lg-5
+          .lightbox-gallery.owl-carousel.owl-theme
+            img.img-fluid.item-img(alt='Item', src='img/item-5.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-1.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-2.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-3.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-4.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-6.jpg')
+        .col-12.col-lg-7
+          .lightbox-content
+            h3.content-title T-Shirt Design
+            .content-description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut sapiente quo explicabo, quasi incidunt aperiam laudantium, nemo cum eaque inventore ut voluptas voluptatibus nihil! Amet soluta, ea illo sint?
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dignissimos culpa deserunt aspernatur ipsa veritatis alias labore tempore laboriosam commodi! Ab neque sunt, odio voluptatibus, dignissimos nisi consequuntur atque qui explicabo eligendi, harum in? Amet aspernatur atque quam. Illo natus tempora explicabo deleniti molestias numquam debitis repudiandae, repellendus voluptatum soluta?
+            ul.list-inline.content-info
+              li.list-inline-item.single-info
+                span Client:
+                p Envato
+              li.list-inline-item.single-info
+                span Categories:
+                p
+                  a(href='#0') Branding
+                  | ,
+                  +spc
+                  a(href='#0') Web Design
+              li.list-inline-item.single-info
+                span Date:
+                p 12 May, 2019
+              li.list-inline-item.single-info
+                span Technologies:
+                p HTML5, SCSS, JS
+            a.btn.content-btn.button-main.button-scheme(href='#0', role='button') Visit Project
+  +nl()
+  // Single lightbox
+  #item-6.lightbox-wrapper
+    .f-basis-100
+      .lightbox-close(data-modal-close)
+        span.close-btn
+          span.btn-line
+    .container
+      .row
+        .col-12.col-lg-5
+          .lightbox-gallery.owl-carousel.owl-theme
+            img.img-fluid.item-img(alt='Item', src='img/item-6.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-1.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-2.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-3.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-4.jpg')
+            img.img-fluid.item-img(alt='Item', src='img/item-5.jpg')
+        .col-12.col-lg-7
+          .lightbox-content
+            h3.content-title Packaging Box Mockup
+            .content-description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut sapiente quo explicabo, quasi incidunt aperiam laudantium, nemo cum eaque inventore ut voluptas voluptatibus nihil! Amet soluta, ea illo sint?
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dignissimos culpa deserunt aspernatur ipsa veritatis alias labore tempore laboriosam commodi! Ab neque sunt, odio voluptatibus, dignissimos nisi consequuntur atque qui explicabo eligendi, harum in? Amet aspernatur atque quam. Illo natus tempora explicabo deleniti molestias numquam debitis repudiandae, repellendus voluptatum soluta?
+            ul.list-inline.content-info
+              li.list-inline-item.single-info
+                span Client:
+                p Envato
+              li.list-inline-item.single-info
+                span Categories:
+                p
+                  a(href='#0') Branding
+                  | ,
+                  +spc
+                  a(href='#0') Web Design
+              li.list-inline-item.single-info
+                span Date:
+                p 12 May, 2019
+              li.list-inline-item.single-info
+                span Technologies:
+                p HTML5, SCSS, JS
+            a.btn.content-btn.button-main.button-scheme(href='#0', role='button') Visit Project

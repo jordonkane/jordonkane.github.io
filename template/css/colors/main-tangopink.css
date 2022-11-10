@@ -1,0 +1,295 @@
+/*!
+  * Item: CodeX
+  * Description:  Personal Portfolio / Resume / CV / vCard Template
+  * Author/Developer: Exill
+  * Author/Developer URL: https://themeforest.net/user/exill
+  * Version: v1.0.0
+  * License: Themeforest Standard Licenses: https://themeforest.net/licenses
+  */
+
+/*----------- Table of Contents -----------*/
+/**
+ * Bootstrap template
+ * Globals
+ * Sidebar
+ * Home
+ * About
+ * Services
+ * Hire
+ * Portfolio
+ * Testimonials
+ * Blog
+ * Contact
+ * Footer
+ */
+/*----------- Bootstrap Template -----------*/
+:root {
+  --custom: #E16F7C;
+}
+
+.table-custom,
+.table-custom>th,
+.table-custom>td {
+  background-color: #f7d7da;
+}
+
+.table-hover .table-custom:hover {
+  background-color: #f3c2c6;
+}
+
+.table-hover .table-custom:hover>td,
+.table-hover .table-custom:hover>th {
+  background-color: #f3c2c6;
+}
+
+.btn-custom {
+  background-color: #E16F7C;
+  border-color: #E16F7C;
+  color: #fff;
+}
+
+.btn-custom:hover {
+  background-color: #da4f5f;
+  border-color: #d84556;
+  color: #fff;
+}
+
+.btn-custom:focus,
+.btn-custom.focus {
+  box-shadow: 0 0 0 0.2rem rgba(230, 133, 144, 0.5);
+}
+
+.btn-custom.disabled,
+.btn-custom:disabled {
+  background-color: #E16F7C;
+  border-color: #E16F7C;
+  color: #fff;
+}
+
+.btn-custom:not(:disabled):not(.disabled):active,
+.btn-custom:not(:disabled):not(.disabled).active,
+.show>.btn-custom.dropdown-toggle {
+  background-color: #d84556;
+  border-color: #d63a4c;
+  color: #fff;
+}
+
+.btn-custom:not(:disabled):not(.disabled):active:focus,
+.btn-custom:not(:disabled):not(.disabled).active:focus,
+.show>.btn-custom.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(230, 133, 144, 0.5);
+}
+
+.btn-outline-custom {
+  border-color: #E16F7C;
+  color: #E16F7C;
+}
+
+.btn-outline-custom:hover {
+  background-color: #E16F7C;
+  border-color: #E16F7C;
+  color: #fff;
+}
+
+.btn-outline-custom:focus,
+.btn-outline-custom.focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 111, 124, 0.5);
+}
+
+.btn-outline-custom.disabled,
+.btn-outline-custom:disabled {
+  background-color: transparent;
+  color: #E16F7C;
+}
+
+.btn-outline-custom:not(:disabled):not(.disabled):active,
+.btn-outline-custom:not(:disabled):not(.disabled).active,
+.show>.btn-outline-custom.dropdown-toggle {
+  background-color: #E16F7C;
+  border-color: #E16F7C;
+  color: #fff;
+}
+
+.btn-outline-custom:not(:disabled):not(.disabled):active:focus,
+.btn-outline-custom:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-custom.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 111, 124, 0.5);
+}
+
+.badge-custom {
+  background-color: #E16F7C;
+  color: #fff;
+}
+
+a.badge-custom:hover,
+a.badge-custom:focus {
+  background-color: #d84556;
+  color: #fff;
+}
+
+a.badge-custom:focus,
+a.badge-custom.focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 111, 124, 0.5);
+  outline: 0;
+}
+
+.alert-custom {
+  background-color: #f9e2e5;
+  border-color: #f7d7da;
+  color: #753a40;
+}
+
+.alert-custom hr {
+  border-top-color: #f3c2c6;
+}
+
+.alert-custom .alert-link {
+  color: #53292d;
+}
+
+.list-group-item-custom {
+  background-color: #f7d7da;
+  color: #753a40;
+}
+
+.list-group-item-custom.list-group-item-action:hover,
+.list-group-item-custom.list-group-item-action:focus {
+  background-color: #f3c2c6;
+  color: #753a40;
+}
+
+.list-group-item-custom.list-group-item-action.active {
+  background-color: #753a40;
+  border-color: #753a40;
+  color: #fff;
+}
+
+.bg-custom {
+  background-color: #E16F7C !important;
+}
+
+a.bg-custom:hover,
+a.bg-custom:focus,
+button.bg-custom:hover,
+button.bg-custom:focus {
+  background-color: #d84556 !important;
+}
+
+.border-custom {
+  border-color: #E16F7C !important;
+}
+
+.text-custom {
+  color: #E16F7C !important;
+}
+
+a.text-custom:hover,
+a.text-custom:focus {
+  color: #d43042 !important;
+}
+
+/*----------- Globals -----------*/
+::-moz-selection {
+  background-color: #E16F7C;
+  color: #fff;
+}
+
+::selection {
+  background-color: #E16F7C;
+  color: #fff;
+}
+
+a:not(.btn) {
+  color: #E16F7C;
+}
+
+a:not(.btn):hover,
+a:not(.btn):focus {
+  color: #d43042;
+}
+
+.color-scheme {
+  color: #E16F7C;
+}
+
+.background-scheme {
+  background-color: #E16F7C;
+}
+
+.btn.button-scheme {
+  background-color: #E16F7C !important;
+  border: 1px solid #E16F7C !important;
+}
+
+.btn.button-scheme:focus {
+  background-color: #d43042 !important;
+  border-color: #d43042 !important;
+  box-shadow: none !important;
+}
+
+.btn.button-outline {
+  background-color: transparent !important;
+  border: 1px solid #E16F7C !important;
+  color: #222 !important;
+}
+
+.btn.button-outline:focus {
+  background-color: rgba(34, 34, 34, 0.05) !important;
+  border-color: #d43042 !important;
+  box-shadow: none !important;
+}
+
+/*----------- Sidebar -----------*/
+.sidebar .sidebar-menu .list-menu .nav-link.active {
+  color: #E16F7C;
+}
+
+/*----------- Home -----------*/
+.home-area .home-name span {
+  color: #E16F7C;
+}
+
+/*----------- About -----------*/
+.about-area .about-content .content-subtitle {
+  color: #E16F7C;
+}
+
+/*----------- Services -----------*/
+.services-area .single-service .service-icon {
+  color: #E16F7C;
+}
+
+/*----------- Portfolio -----------*/
+.portfolio-area .filter-control>li:hover,
+.portfolio-area .filter-control>li.tab-active {
+  color: #e68893;
+}
+
+.portfolio-area .filter-control>li:hover:before,
+.portfolio-area .filter-control>li.tab-active:before {
+  background-color: #e68893;
+}
+
+.portfolio-area .portfolio-grid .portfolio-wrapper .item-content .content-more {
+  color: #E16F7C;
+}
+
+/*----------- Testimonials -----------*/
+.testimonials-area .single-review .review-icon {
+  color: #E16F7C;
+}
+
+/*----------- Blog -----------*/
+.blog-area .single-post .post-img .content-date {
+  background-color: #E16F7C;
+}
+
+/*----------- Contact -----------*/
+.contact-area .contact-form .form-group .form-control:focus {
+  border-bottom: 1px solid #ea99a2;
+}
+
+/*----------- Footer -----------*/
+.footer-area .contact-info .info-icon {
+  color: #E16F7C;
+}

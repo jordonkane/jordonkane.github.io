@@ -1,0 +1,40 @@
+include init
+mixin css-injects()
+  // Required meta tags
+  meta(charset='utf-8')
+  +nl()
+  // Title
+  title
+    != '<%= itemTitle %>'
+  +nl()
+  // Description
+  meta(name='description', content!='<%= itemDescription %>')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  //- CSS injects
+  +nl()
+  // Favicons
+  link(rel='apple-touch-icon', sizes='180x180', href='img/favicons/apple-touch-icon.png')
+  link(rel='icon', type='image/png', sizes='32x32', href='img/favicons/favicon-32x32.png')
+  link(rel='icon', type='image/png', sizes='16x16', href='img/favicons/favicon-16x16.png')
+  +nl()
+  // Web fonts
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', rel='stylesheet')
+  +nl()
+  // CSS vendors
+  link(rel='stylesheet', href='css/bootstrap-custom.css')
+  link(rel='stylesheet', href='css/ionicons.min.css')
+  link(rel='stylesheet', href='css/owl.carousel.min.css')
+  link(rel='stylesheet', href='css/owl.theme.default.min.css')
+  link(rel='stylesheet', href='css/simplebar.min.css')
+  link(rel='stylesheet', href='css/jquery.mb.YTPlayer.min.css')
+  +nl()
+  // Main CSS
+  link(rel='stylesheet', href='css/main.css')
+  +nl()
+  // CSS Color scheme
+  +nl()
+  link#color-scheme(rel='stylesheet', href='css/colors/main-red.css')
+  +nl()
+  // Custom CSS (Add your custom CSS styles to this file)
+  link(rel='stylesheet', href='css/custom.css')
+  //- End of CSS injects

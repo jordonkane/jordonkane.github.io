@@ -1,0 +1,26 @@
++nl()
+// Contact
+section#contact-area.single-section.contact-area.alt-bg
+  .container
+    .row
+      .col-12
+        .section-heading
+          h2.section-title Get in Touch
+          p.section-description Feel free to contact me anytime
+    .row
+      +nl()
+      // Contact form
+      .col-12
+        form#contact-form.contact-form(action='php/contact.php')
+          .row
+            .col-12.col-md-6.form-group
+              input#contact-name.form-control(type='text', name='name', placeholder='Name', required='')
+            .col-12.col-md-6.form-group
+              input#contact-email.form-control(type='email', name='email', placeholder='Email', required='')
+            .col-12.form-group
+              input#contact-subject.form-control(type='text', name='subject', placeholder='Subject', required='')
+            .col-12.form-group.form-message
+              textarea#contact-message.form-control(name='message', placeholder='Message', rows='5', required='')
+            .col-12.form-submit
+              button#contact-submit.btn.button-main.button-scheme(type='submit') Send message
+              p.contact-feedback
