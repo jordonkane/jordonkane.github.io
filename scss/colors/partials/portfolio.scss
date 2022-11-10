@@ -1,0 +1,24 @@
+/*----------- Portfolio -----------*/
+
+.portfolio-area {
+  .filter-control {
+    &>li {
+      &:hover,
+      &.tab-active {
+        color: lighten($color-scheme, 6%);
+        &:before {
+          background-color: lighten($color-scheme, 6%);
+        }
+      }
+    }
+  }
+  .portfolio-grid {
+    .portfolio-wrapper {
+      .item-content {
+        .content-more {
+          color: $color-scheme;
+        }
+      }
+    }
+  }
+}

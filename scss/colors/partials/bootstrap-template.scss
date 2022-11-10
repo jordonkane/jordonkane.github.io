@@ -1,0 +1,74 @@
+/*----------- Bootstrap Template -----------*/
+
+$theme-colors: ("custom": $color-scheme,
+);
+
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  --#{'custom'}: #{$color-scheme};
+}
+
+// Tables
+@each $color,
+$value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -9));
+}
+
+// Buttons
+@each $color,
+$value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+}
+
+@each $color,
+$value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+@if $enable-gradients {
+
+  @each $color,
+  $value in $theme-colors {
+    @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}

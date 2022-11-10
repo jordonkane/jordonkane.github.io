@@ -1,0 +1,32 @@
+$current-theme-name: "darkblue";
+@import "schemes/darkblue.scss";
+
+@import '../init';
+/*----------- Table of Contents -----------*/
+
+/**
+ * Bootstrap template
+ * Globals
+ * Sidebar
+ * Home
+ * About
+ * Services
+ * Hire
+ * Portfolio
+ * Testimonials
+ * Blog
+ * Contact
+ * Footer
+ */
+
+@import 'partials/bootstrap-template';
+@import 'partials/globals';
+@import 'partials/sidebar';
+@import 'partials/home';
+@import 'partials/about';
+@import 'partials/services';
+@import 'partials/portfolio';
+@import 'partials/testimonials';
+@import 'partials/blog';
+@import 'partials/contact';
+@import 'partials/footer';

@@ -1,0 +1,54 @@
+/*----------- Preloader -----------*/
+
+.preloader {
+  background-color: #0e0e0e;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+
+  .preloader-block {
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    z-index: 3000;
+
+    .preloader-icon {
+      .loading-dot {
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        height: 13px;
+        width: 13px;
+
+        &.loading-dot-1 {
+          animation: 1.2s grow ease-in-out infinite;
+        }
+
+        &.loading-dot-2 {
+          animation: 1.2s grow ease-in-out infinite 0.15555s;
+          margin: 0 14px;
+        }
+
+        &.loading-dot-3 {
+          animation: 1.2s grow ease-in-out infinite 0.3s;
+        }
+
+        @keyframes grow {
+
+          0%,
+          40%,
+          100% {
+            transform: scale(0);
+          }
+
+          40% {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

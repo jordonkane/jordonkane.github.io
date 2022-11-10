@@ -1,0 +1,44 @@
+/*----------- Globals -----------*/
+
+::selection {
+  color: #fff;
+  background-color: $color-scheme;
+}
+
+a:not(.btn) {
+  color: $color-scheme;
+  @include smart-color('&:hover, &:focus', darken, color, $color-scheme, 15%);
+}
+
+.color-scheme {
+  color: $color-scheme;
+}
+
+.background-scheme {
+  background-color: $color-scheme;
+}
+
+.btn {
+  &.button-scheme {
+    background-color: $color-scheme !important;
+    border: 1px solid $color-scheme !important;
+
+    &:focus {
+      box-shadow: none !important;
+      border-color: darken($color-scheme, 15%) !important;
+      background-color: darken($color-scheme, 15%) !important;
+    }
+  }
+
+  &.button-outline {
+    background-color: transparent !important;
+    border: 1px solid $color-scheme !important;
+    color: #222 !important;
+
+    &:focus {
+      box-shadow: none !important;
+      border-color: darken($color-scheme, 15%) !important;
+      background-color: rgba(#222, 0.05) !important;
+    }
+  }
+}

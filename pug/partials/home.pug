@@ -1,0 +1,27 @@
+mixin home(variant)
+  - var variantClass = (variant ? `${variant}-variant` : null)
+  +nl()
+  // Home
+  section#home-area.home-area.element-cover-bg(class=variantClass, style='background-image:url(img/home.jpg)')
+    if variant === 'particles' || variant === 'galaxy' || variant === 'snow' || variant === 'bubble'
+      #particles-js
+    if variant === 'video'
+      #homeVideo.player(data-property="{videoURL:'https://youtu.be/EfTUpvxEbqc',containment:'#home-area',autoPlay:true, mute:true, showControls:false, stopMovieOnBlur:false, showYTLogo: false}")
+    .container.h-100
+      .row.h-100.align-items-center.justify-content-center
+        .col-12.col-lg-8.home-content.text-center
+          h1.home-name
+            | Alex
+            +spc
+            span Smith
+          h4.cd-headline.clip.home-headline
+            | I’m a
+            +spc
+            span.cd-words-wrapper.single-headline
+              b.is-visible Developer
+              b Designer
+              b Freelancer
+        a(href='#about-area', data-scroll)
+          .home-mouse
+            .mouse-shape
+              .mouse-wheel

@@ -1,0 +1,30 @@
+/*----------- Services -----------*/
+
+.services-area {
+  .single-service {
+    text-align: center;
+    padding: 38px 24px;
+    margin-bottom: 30px;
+    transition: $transition;
+    background-color: #fff;
+    border: 1px solid rgba(214, 214, 214, 0.8);
+
+    .service-icon {
+      font-size: 50px;
+      margin-bottom: 22px;
+      display: inline-block;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .service-description {
+      margin-bottom: 0;
+    }
+  }
+}

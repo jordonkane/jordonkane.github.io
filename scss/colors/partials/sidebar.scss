@@ -1,0 +1,13 @@
+/*----------- Sidebar -----------*/
+
+.sidebar {
+  .sidebar-menu {
+    .list-menu {
+      .nav-link {
+        &.active {
+          color: $color-scheme;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+$font-1: 'Open Sans',
+sans-serif;
+$transition: all .15s ease-in-out;
+$transition-x2: all .1s ease-in-out;
+
+@function theme-scheme($dark, $light) {
+  @if $theme == 'dark' {
+    @return $dark;
+  }
+  @else if $theme == 'light' {
+    @return $light;
+  }
+}
+
+@mixin open-btn() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 19px;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+
+  .btn-line,
+  &:before,
+  &:after {
+    height: 3px;
+    width: 100%;
+    background-color: gray;
+    align-self: flex-end;
+  }
+
+  &:before {
+    content: '';
+    width: 85%;
+  }
+
+  &:after {
+    content: '';
+  }
+
+  .btn-line {
+    width: 55%;
+  }
+}
+
+@mixin close-btn() {
+  justify-content: center;
+
+  .btn-line,
+  &:before,
+  &:after {
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+  }
+
+  .btn-line {
+    display: none;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@mixin smart-color($selector, $type, $property, $color, $percentage) {
+  #{$selector} {
+    @if $type == 'darken' {
+      #{$property}: darken($color, $percentage);
+    }
+    @else if $type == 'lighten' {
+      #{$property}: lighten($color, $percentage);
+    }
+  }
+}
+
+@mixin anchor-basic($color, $secondary-color) {
+  color: $color;
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+  }
+}
+
+@mixin button() {
+  padding: 10px 38px;
+  font-size: 14px;
+  border-radius: 30px;
+}

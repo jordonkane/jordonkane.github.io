@@ -1,0 +1,157 @@
+/*----------- Home -----------*/
+
+.home-area {
+  background-position: center center;
+  height: 100vh;
+  &:before {
+    background-color: rgba(0, 0, 0, 0.68);
+  }
+
+  .home-name {
+    font-weight: 700;
+    font-size: 68px;
+    margin-bottom: 29px;
+    letter-spacing: 0.3px;
+    color: #fff;
+  }
+
+  .home-headline {
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 0;
+    letter-spacing: 0.3px;
+
+    .single-headline {
+      // overflow: hidden;
+      vertical-align: top;
+      display: inline-block;
+      position: relative;
+      text-align: left;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #b9b9b9;
+      }
+
+      b {
+        display: inline-block;
+        position: absolute;
+        white-space: nowrap;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        font-weight: 600;
+
+        &.is-visible {
+          position: relative;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .home-mouse {
+    position: absolute;
+    width: 29px;
+    right: 0;
+    bottom: 5.5%;
+    left: 0;
+    margin: 0 auto;
+
+    .mouse-shape {
+      width: 3px;
+      padding: 5px 11px;
+      height: 28px;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      opacity: .8;
+      box-sizing: content-box;
+      border-color: #fff;
+      background-color: rgba(#000, .45);
+      .mouse-wheel {
+        background-color: #fff;
+        width: 3px;
+        height: 9px;
+        border-radius: 25%;
+        animation-name: scrollDown;
+        animation-duration: 1.3s;
+        animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes scrollDown {
+        0% {
+          opacity: 0;
+        }
+
+        10% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        100% {
+          transform: translateY(15px);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.home-area {
+  // If video variant
+  &.video-variant {
+    #wrapper_homeVideo:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, .60);
+    }
+  }
+  // if particles variant
+  & {
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .home-area {
+    height: auto;
+    padding: 160px 0;
+    margin-top: 58px;
+    .home-name {
+      font-size: 62px;
+    }
+    .home-headline {
+      font-size: 30px;
+    }
+    .home-mouse {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .home-area {
+    .home-name {
+      font-size: 48px;
+    }
+    .home-headline {
+      font-size: 26px;
+    }
+  }
+}
